@@ -11,7 +11,7 @@ describe('game', () => {
     expect(output).to.deep.equal(['15','Love']);
   });
 
-  xit('tracks players score from Love/Love to Love/15 to Love/30', () => {
+  it('tracks players score from Love/Love to 15/Love to 30/Love', () => {
     const game = new Game();
 
 
@@ -19,6 +19,6 @@ describe('game', () => {
     const output = game.firstPlayerScores();
 
 
-    expect(output).to.deep.equal(['Love','30']);
+    expect(output).to.deep.equal(['30','Love']);
   });
 });
