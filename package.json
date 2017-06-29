@@ -6,10 +6,12 @@
   "license": "MIT",
   "scripts": {
     "test": "mocha",
-		"start": "node src"
+    "test:watch": "watch-run -i -p 'test/**,src/**' mocha",
+    "start": "node src"
   },
   "devDependencies": {
     "chai": "^4.0.2",
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "watch-run": "^1.2.5"
   }
 }
