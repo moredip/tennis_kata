@@ -1,6 +1,6 @@
 function createScore(repr,next){
   return {
-    toString(){ return repr; },
+    toString: () => repr,
     next
   }
 }
