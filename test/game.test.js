@@ -35,4 +35,14 @@ describe('game', () => {
     expect(game.firstPlayerScores())
       .to.deep.equal('PLAYER ONE VICTORY');
   });
+
+  it('tracks game to player two win', () => {
+    const game = new Game();
+
+    game.secondPlayerScores();
+    game.secondPlayerScores();
+    game.secondPlayerScores();
+    expect(game.secondPlayerScores())
+      .to.deep.equal('PLAYER TWO VICTORY');
+  });
 });

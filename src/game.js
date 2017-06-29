@@ -21,6 +21,10 @@ module.exports = class Game {
       return 'PLAYER ONE VICTORY';
     }
 
+    if( this._secondPlayerScore === null ){
+      return 'PLAYER TWO VICTORY';
+    }
+
     return [
       this._firstPlayerScore.toString(),
       this._secondPlayerScore.toString()
