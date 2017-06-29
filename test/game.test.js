@@ -1,36 +1,43 @@
 const Game = require('../src/game');
 
 describe('game', () => {
+  it('tracks game to 15-Love', () => {
+    const game = new Game();
+
+    expect(game.firstPlayerScores())
+      .to.equal('15-Love');
+  });
+
   it('tracks game to 40/30', () => {
     const game = new Game();
 
     expect(game.firstPlayerScores())
-      .to.deep.equal(['15','Love']);
+      .to.deep.equal('15-Love');
 
     expect(game.firstPlayerScores())
-      .to.deep.equal(['30','Love']);
+      .to.deep.equal('30-Love');
 
     expect(game.secondPlayerScores())
-      .to.deep.equal(['30','15']);
+      .to.deep.equal('30-15');
 
     expect(game.firstPlayerScores())
-      .to.deep.equal(['40','15']);
+      .to.deep.equal('40-15');
 
     expect(game.secondPlayerScores())
-      .to.deep.equal(['40','30']);
+      .to.deep.equal('40-30');
   });
 
   it('tracks game to player one win', () => {
     const game = new Game();
 
     expect(game.firstPlayerScores())
-      .to.deep.equal(['15','Love']);
+      .to.deep.equal('15-Love');
 
     expect(game.firstPlayerScores())
-      .to.deep.equal(['30','Love']);
+      .to.deep.equal('30-Love');
 
     expect(game.firstPlayerScores())
-      .to.deep.equal(['40','Love']);
+      .to.deep.equal('40-Love');
 
     expect(game.firstPlayerScores())
       .to.deep.equal('PLAYER ONE VICTORY');

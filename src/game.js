@@ -28,6 +28,6 @@ module.exports = class Game {
     return [
       this._firstPlayerScore.toString(),
       this._secondPlayerScore.toString()
-    ];
+    ].join('-');
   }
 };
