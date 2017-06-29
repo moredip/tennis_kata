@@ -11,6 +11,11 @@ module.exports = class Game {
     return this._representCurrentScore();
   }
 
+  secondPlayerScores(){
+    this._secondPlayerScore = this._secondPlayerScore.next();
+    return this._representCurrentScore();
+  }
+
   _representCurrentScore(){
     return [
       this._firstPlayerScore.toString(),
