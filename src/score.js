@@ -22,6 +22,16 @@ class Thirty {
   toString(){ 
     return '30'; 
   }
+
+  next(){
+    return new Forty();
+  }
+}
+
+class Forty {
+  toString(){ 
+    return '40'; 
+  }
 }
 
 function love(){
