@@ -1,41 +1,17 @@
-class Love {
-  toString(){ 
-    return 'Love'; 
-  }
-
-  next(){
-    return new Fifteen();
+function createScore(repr,next){
+  return {
+    toString(){ return repr; },
+    next
   }
 }
 
-class Fifteen {
-  toString(){ 
-    return '15'; 
-  }
-
-  next(){
-    return new Thirty();
-  }
-}
-
-class Thirty {
-  toString(){ 
-    return '30'; 
-  }
-
-  next(){
-    return new Forty();
-  }
-}
-
-class Forty {
-  toString(){ 
-    return '40'; 
-  }
-}
+const LOVE = createScore('Love',()=> FIFTEEN);
+const FIFTEEN = createScore('15',()=> THIRTY);
+const THIRTY = createScore('30',()=> FORTY);
+const FORTY = createScore('40');
 
 function love(){
-  return new Love();
+  return LOVE;
 }
 
 module.exports = {
