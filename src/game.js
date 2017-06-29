@@ -17,6 +17,10 @@ module.exports = class Game {
   }
 
   _representCurrentScore(){
+    if( this._firstPlayerScore === null ){
+      return 'PLAYER ONE VICTORY';
+    }
+
     return [
       this._firstPlayerScore.toString(),
       this._secondPlayerScore.toString()

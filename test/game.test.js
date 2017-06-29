@@ -19,4 +19,20 @@ describe('game', () => {
     expect(game.secondPlayerScores())
       .to.deep.equal(['40','30']);
   });
+
+  it('tracks game to player one win', () => {
+    const game = new Game();
+
+    expect(game.firstPlayerScores())
+      .to.deep.equal(['15','Love']);
+
+    expect(game.firstPlayerScores())
+      .to.deep.equal(['30','Love']);
+
+    expect(game.firstPlayerScores())
+      .to.deep.equal(['40','Love']);
+
+    expect(game.firstPlayerScores())
+      .to.deep.equal('PLAYER ONE VICTORY');
+  });
 });

@@ -31,4 +31,13 @@ describe('Score', () => {
       expect(next.toString()).to.equal('40');
     });
   });
+
+  describe('40', () => {
+    const forty = Score.love().next().next().next();
+
+    it('transitions to win', () => {
+      const next = forty.next();
+      expect(next).to.equal(null);
+    });
+  });
 });
