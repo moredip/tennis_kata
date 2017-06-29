@@ -8,7 +8,7 @@ describe('game', () => {
       .to.equal('15-Love');
   });
 
-  it('tracks game to 40/30', () => {
+  it('tracks game to Deuce', () => {
     const game = new Game();
 
     expect(game.firstPlayerScores())
@@ -25,6 +25,9 @@ describe('game', () => {
 
     expect(game.secondPlayerScores())
       .to.deep.equal('40-30');
+
+    expect(game.secondPlayerScores())
+      .to.deep.equal('Deuce');
   });
 
   it('tracks game to player one win', () => {
